@@ -18,8 +18,10 @@ public class AnalysisConfigurer implements ElasticsearchAnalysisConfigurer {
         context.tokenFilter("edge_ngram_filter")
                 .type("edgeNGram")
                 .param("side", "front")
-                .param("max_gram", 3)
+                .param("max_gram", 6)
                 .param("min_gram", 3);
+
+
 
         context.analyzer("english").custom()
                 .tokenizer("standard")
